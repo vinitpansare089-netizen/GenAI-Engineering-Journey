@@ -4,11 +4,13 @@ from langchain_core.prompts import ChatPromptTemplate
 
 from langchain_groq import ChatGroq
 
+load_dotenv()
+
 ### Created a prompt Template
 
-prompt = ChatPromptTemplate.from_template([
+prompt = ChatPromptTemplate.from_template(
     'Exaplin {topic} in simple terms with a real-life example'
-])
+)
 
 #### Initialize the LLm 
 
