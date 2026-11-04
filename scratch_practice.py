@@ -9,15 +9,17 @@ load_dotenv()
 
 ######## Prompt Templating for LLM
 
-prompt = ChatPromptTemplate.from_template(
-    'Explain {topic} that if they exists or not'
-)
+prompt = ChatPromptTemplate.from_messages([
+    ('system' , 'you ara a {role}'),
+    ('ai' , 'Do not give diplomatic response on {topic}')
+])
 
 #### connecting the LLM
 
 llm = ChatGroq(
     model = 'openai/gpt-oss-20b',
-    temperature = 0
+    temperature = 0,
+    max_tokens = 1024
 )
 
 ###### Connecting the components
@@ -27,6 +29,7 @@ chain = prompt | llm
 
 ##### Invoking the Prompt only to filling Varible in prompt template
 response = chain.invoke({
+    'role' : 'Atheist',
     'topic': 'GOD'
 })
 
