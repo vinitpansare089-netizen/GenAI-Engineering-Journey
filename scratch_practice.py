@@ -20,7 +20,6 @@ llm = ChatGroq(
     temperature = 0
 )
 
-
 ###### Connecting the components
 
 chain = prompt | llm 
