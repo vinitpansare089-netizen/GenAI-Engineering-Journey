@@ -9,7 +9,7 @@ load_dotenv()
 ### Created a prompt Template
 
 prompt = ChatPromptTemplate.from_template(
-    'Exaplin {topic} in simple terms with a real-life example'
+    'Exaplin {topic} in simple terms with a real-life example'v
 )
 
 #### Initialize the LLm 
