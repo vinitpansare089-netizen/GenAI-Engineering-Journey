@@ -32,3 +32,15 @@ llm = ChatGroq(
     temperature = 0,
     max_tokens = 512 
 )
+
+### chaining the Components
+chain = prompt | llm
+
+### invoking and Fills the Template Variables
+result = chain.invoke({
+    'tech' : 'Python',
+    'topic' : 'Decorators'
+})
+
+### Print the result 
+print(result)
