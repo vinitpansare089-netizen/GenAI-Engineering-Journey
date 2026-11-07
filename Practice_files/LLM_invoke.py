@@ -5,8 +5,8 @@ from langchain_groq import ChatGroq
 load_dotenv()
 
 prompt = ChatPromptTemplate.from_messages([
-    ('system', 'explain me {topic}'),
-    ('human' , 'You are a {expert}')
+    ('human' , 'You are a {expert}'),
+    ('system', 'explain me {topic}')
 ])
 
 llm = ChatGroq(
