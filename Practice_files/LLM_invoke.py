@@ -22,4 +22,5 @@ result = chain.invoke({
     'topic' : 'RAG'
 })
 
+print(result)
 
