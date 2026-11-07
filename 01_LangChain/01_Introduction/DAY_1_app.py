@@ -40,6 +40,7 @@ chain = prompt | llm
 result = chain.invoke({
     'tech' : 'Python',
     'topic' : 'Decorators'
+    
 })
 
 ### Print the result 
