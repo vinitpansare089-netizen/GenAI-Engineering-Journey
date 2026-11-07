@@ -8,4 +8,8 @@ prompt = ChatPromptTemplate.from_template(
     'you are {tech} an expert make me understand with an example'
 )
 
-result = 
+result = prompt.invoke({
+    'tech' : 'RAG'
+})
+
+print(result)
