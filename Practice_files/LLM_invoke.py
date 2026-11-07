@@ -10,8 +10,16 @@ prompt = ChatPromptTemplate.from_messages([
 ])
 
 llm = ChatGroq(
-    model = 'openai/gpt-oss-20b'.
+    model = 'openai/gpt-oss-20b',
     temperature = 0,
     max_tokens = 1024
 )
+
+chain = prompt | llm
+
+result = chain.invoke({
+    'expert' : 'tech',
+    'topic' : 'RAG'
+})
+
 
