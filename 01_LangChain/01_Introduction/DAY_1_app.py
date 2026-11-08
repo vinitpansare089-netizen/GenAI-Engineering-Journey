@@ -42,6 +42,5 @@ result = chain.invoke({
     'topic' : 'Decorators'
 })
 
-
 ### Print the result 
 print(result)
