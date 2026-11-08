@@ -36,6 +36,7 @@ llm = ChatGroq(
 ### chaining the Components
 chain = prompt | llm
 
+
 ### invoking and Fills the Template Variables
 result = chain.invoke({
     'tech' : 'Python',
