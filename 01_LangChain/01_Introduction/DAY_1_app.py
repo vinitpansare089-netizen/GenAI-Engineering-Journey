@@ -12,7 +12,6 @@ Requirements:
 - Print only the generated response.
 """
 
-
 from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
