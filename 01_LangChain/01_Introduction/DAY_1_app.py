@@ -10,6 +10,7 @@ Requirements:
 - Connect using LCEL.
 - Invoke the chain.
 - Print only the generated response.
+
 """
 
 from langchain_core.prompts import ChatPromptTemplate
