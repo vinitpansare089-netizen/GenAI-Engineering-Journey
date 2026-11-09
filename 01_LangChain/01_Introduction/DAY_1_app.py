@@ -19,6 +19,7 @@ from langchain_groq import ChatGroq
 #### Loading the Environment
 load_dotenv()
 
+
 ### Template Prompting
 prompt = ChatPromptTemplate.from_messages([
 
