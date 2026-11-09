@@ -43,4 +43,4 @@ result = chain.invoke({
 })
 
 ### Print the result 
-print(result)
+print(result.content)
