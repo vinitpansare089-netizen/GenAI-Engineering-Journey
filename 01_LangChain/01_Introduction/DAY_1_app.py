@@ -33,7 +33,6 @@ llm = ChatGroq(
     max_tokens = 512 
 )
 
-
 ### chaining the Components
 chain = prompt | llm
 
