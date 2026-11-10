@@ -37,5 +37,4 @@ result = prompt.invoke({
     'topic' : 'RAG'
 })
 
-
 print(result)
