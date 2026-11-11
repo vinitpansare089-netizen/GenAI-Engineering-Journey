@@ -10,6 +10,8 @@ prompt = ChatPromptTemplate.from_template(
     'Why People in this world make many {topic} and they don not admit.'
 )
 
+
+
 ###Providing the Input
 
 result = prompt.invoke({
