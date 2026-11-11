@@ -34,7 +34,6 @@ prompt = ChatPromptTemplate.from_messages([
 
 
 
-
 result = prompt.invoke({
     'role': 'AI Engineer',
     'topic' : 'RAG'
