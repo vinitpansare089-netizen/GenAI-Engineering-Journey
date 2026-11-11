@@ -2,7 +2,6 @@
      Template the prompt
 """
 
-
 from langchain_core.prompts import ChatPromptTemplate
 
 #####Create a prompt Template
