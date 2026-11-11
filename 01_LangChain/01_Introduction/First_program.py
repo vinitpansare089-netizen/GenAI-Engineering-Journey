@@ -20,7 +20,6 @@ result = prompt.invoke({
 })
 
 
-
 # print(result)
 # print("Message:", result.messages[0].content)
 # print("Message type:", type(result.messages[0]))
