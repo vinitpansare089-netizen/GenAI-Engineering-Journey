@@ -23,6 +23,7 @@ result = prompt.invoke({
 # print("Additional kwargs:", result.messages[0].additional_kwargs)
 # print("Response metadata:", result.messages[0].response_metadata)
 
+
 from langchain_core.prompts import ChatPromptTemplate
 
 prompt = ChatPromptTemplate.from_messages([
