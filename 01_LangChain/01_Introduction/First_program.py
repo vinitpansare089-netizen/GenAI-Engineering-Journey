@@ -15,7 +15,6 @@ result = prompt.invoke({
     #'topic': 'Retrieval Argumented Generation'
     # 'topic': 'Embeddings'
     'topic': 'Mistakes'
-
 })
 
 # print(result)
