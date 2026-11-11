@@ -11,7 +11,6 @@ prompt = ChatPromptTemplate.from_template(
 )
 
 ###Providing the Input
-
 result = prompt.invoke({
     #'topic': 'Retrieval Argumented Generation'
     # 'topic': 'Embeddings'
