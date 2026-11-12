@@ -30,6 +30,7 @@ prompt = ChatPromptTemplate.from_messages([
     ('ai', 'Explain {topic} with an example')
 ])
 
+
 result = prompt.invoke({
     'role': 'AI Engineer',
     'topic' : 'RAG'
