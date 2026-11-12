@@ -26,7 +26,7 @@ result = prompt.invoke({
 from langchain_core.prompts import ChatPromptTemplate
 
 prompt = ChatPromptTemplate.from_messages([
-    
+
     ('system', 'you are an expert {role}'),
     ('ai', 'Explain {topic} with an example')
 ])
