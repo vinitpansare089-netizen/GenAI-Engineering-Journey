@@ -23,6 +23,5 @@ result = chain.invoke({
     'tech' : 'RAG'
 })
 
-
 print(result.content)
 
