@@ -17,6 +17,7 @@ llm = ChatGroq(
 )
 
 
+
 chain = prompt | llm 
 
 result = chain.invoke({
