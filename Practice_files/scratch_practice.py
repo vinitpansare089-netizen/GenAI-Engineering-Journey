@@ -33,5 +33,6 @@ response = chain.invoke({
     'topic': 'GOD'
 })
 
+
 print(response.content)
 
