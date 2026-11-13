@@ -13,15 +13,15 @@ prompt = ChatPromptTemplate.from_messages([
 llm = ChatGroq(
     model = 'openai/gpt-oss-20b',
     temperature = 0,
-    max_tokens = 512
+    max_tokens = 1024
 )
 
 chain = prompt | llm 
 
-result = chain.invoke(
+result = chain.invoke({
     'field' : 'AI',
     'tech' : 'RAG'
-)
+})
 
 print(result.content)
 
