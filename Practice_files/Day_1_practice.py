@@ -25,4 +25,3 @@ result = chain.invoke({
 
 print(result.content)
 
-
