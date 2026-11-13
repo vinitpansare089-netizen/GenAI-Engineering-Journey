@@ -7,9 +7,10 @@ load_dotenv()
 
 llm = ChatGroq(
     model="openai/gpt-oss-20b",
-    temperature=0
+    temperature= 1
+    
 )
 
-response = llm.invoke("Explain RAG in simple terms.")
+response = llm.invoke("Explain God")
 
 print(response.content)
