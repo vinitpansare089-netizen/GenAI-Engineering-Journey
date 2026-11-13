@@ -32,8 +32,9 @@ llm = ChatGroq(
 
 chain = prompt | llm
 
-responce = chain.invoke({
+response = chain.invoke({
     'Deity' : 'krishna'
 })
 
-print(responce.content)
+print(response.content)
+print(response.response_metadata)
