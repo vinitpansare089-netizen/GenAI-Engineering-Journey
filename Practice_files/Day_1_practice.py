@@ -21,6 +21,7 @@ chain = prompt | llm
 result = chain.invoke({
     'field' : 'AI',
     'tech' : 'RAG'
+    
 })
 
 print(result.content)
