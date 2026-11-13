@@ -16,8 +16,7 @@ llm = ChatGroq(
     max_tokens = 1024
 )
 
-
-chain = prompt | llm
+chain = prompt | llm 
 
 result = chain.invoke({
     'field' : 'AI',
