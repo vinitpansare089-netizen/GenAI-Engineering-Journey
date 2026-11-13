@@ -17,7 +17,7 @@ llm = ChatGroq(
 )
 
 
-chain = prompt | llm 
+chain = prompt | llm
 
 result = chain.invoke({
     'field' : 'AI',
