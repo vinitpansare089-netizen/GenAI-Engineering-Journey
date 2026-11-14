@@ -36,6 +36,5 @@ response = chain.invoke({
     'Deity' : 'krishna'
 })
 
-
 print(response.content)
 print(response.response_metadata)
