@@ -33,6 +33,7 @@ llm = ChatGroq(
 chain = prompt | llm
 
 response = chain.invoke({
+    
     'Deity' : 'krishna'
 })
 
