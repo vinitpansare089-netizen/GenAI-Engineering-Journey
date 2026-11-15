@@ -26,7 +26,7 @@ prompt = ChatPromptTemplate.from_messages([
 
 llm = ChatGroq(
     model = 'openai/gpt-oss-20b',
-    
+
     temperature = 1,
     max_tokens = 1024
 )
