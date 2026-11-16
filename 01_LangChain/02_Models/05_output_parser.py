@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 prompt = ChatPromptTemplate.from_messages([
-    ('system', 'you are {diety}'),
+    ('system', 'you are {deity}'),
     ('human', 'give me views on {topic}')
 ])
 
