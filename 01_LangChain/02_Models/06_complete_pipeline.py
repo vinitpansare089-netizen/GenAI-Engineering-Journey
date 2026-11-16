@@ -12,7 +12,7 @@ Write the code yourself with these requirements:
 """
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
-from langchain_core.output_parsers import StrOutputParser
+from langchain_core.output_parsers import JsonOutputParser
 
 from dotenv import load_dotenv
 
@@ -29,7 +29,7 @@ llm = ChatGroq(
     max_tokens=400
 )
 
-parser = StrOutputParser()
+parser = JsonOutputParser()
 
 chain = prompt | llm | parser
 
