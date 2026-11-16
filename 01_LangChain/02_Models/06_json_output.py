@@ -27,3 +27,4 @@ response = chain.invoke({
 
 print(response)
 print(type(response))
+
