@@ -28,4 +28,5 @@ response = chain.invoke({
     'topic' : 'Life'
 })
 
-print(response)
+# print(response)
+print(type(response))
