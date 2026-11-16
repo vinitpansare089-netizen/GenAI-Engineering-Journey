@@ -25,7 +25,7 @@ prompt = ChatPromptTemplate.from_messages([
 llm = ChatGroq(
     model='openai/gpt-oss-20b',
     temperature=1,
-    max_tokens=300
+    max_tokens=400
 )
 
 parser = StrOutputParser()
@@ -37,4 +37,7 @@ response = chain.invoke({
     'topic' : 'Life'
 })
 
-print(response)
+# print("Response:", response)
+print("Type:", type(response))
+print("Is string:", isinstance(response, str))
+print("Length:", len(response))
