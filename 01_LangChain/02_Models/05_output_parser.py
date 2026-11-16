@@ -19,3 +19,7 @@ llm = ChatGroq(
 ####Parsing the output in string
 parser = StrOutputParser()
 
+###Chaining the components
+chain = prompt | llm | parser
+
+
