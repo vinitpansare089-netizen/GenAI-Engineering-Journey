@@ -319,3 +319,52 @@ These are starting points, not strict rules. Always evaluate the actual model's 
 8. `finish_reason="length"` indicates a length-based stopping condition.
 
 **Day 2 — Model Parameters: Fundamentals completed.**
+
+# Day 2 – Output Parsers (LangChain)
+
+**1. What is an Output Parser?**
+
+An Output Parser is a LangChain component that converts model responses into a specific, usable format.
+
+**2. StrOutputParser**
+
+- Converts an AIMessage into its text content.
+- Useful when an application needs a normal text response.
+
+Example:
+
+```python
+from langchain_core.output_parsers import StrOutputParser
+
+parser = StrOutputParser()
+chain = prompt | llm | parser
+```
+
+**3. JSON Output**
+
+- Converts model output into JSON format.
+- Useful when an application needs key-value data.
+
+**4. Structured Data Output**
+
+- Converts model responses into predefined fields and data types.
+- Useful when applications need predictable data.
+
+**5. LCEL Pipeline**
+
+```python
+chain = prompt | llm | parser
+```
+
+Execution:
+
+Prompt → Model → Parser → Final Output
+
+**Key Takeaways:**
+
+- Output Parsers transform model responses.
+- StrOutputParser extracts text.
+- JSON parsing provides machine-readable data.
+- Structured output follows a predefined schema.
+
+**Day 2 – Output Parser Fundamentals: Completed.**
