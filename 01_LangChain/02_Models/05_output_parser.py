@@ -22,5 +22,10 @@ parser = StrOutputParser()
 ###Chaining the components
 chain = prompt | llm | parser
 
+####Invoking the components
+response = chain.invoke({
+    'deity': 'Krishna',
+    'topic' : 'Life'
+})
 
-
+print(response)
