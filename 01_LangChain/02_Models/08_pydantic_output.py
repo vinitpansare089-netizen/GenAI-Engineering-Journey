@@ -27,6 +27,7 @@ llm = ChatGroq(
 
 
 
+
 chain = prompt | llm | parser
 
 response = chain.invoke({
