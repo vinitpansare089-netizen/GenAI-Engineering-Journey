@@ -25,7 +25,6 @@ llm = ChatGroq(
     temperature=0
 )
 
-
 chain = prompt | llm | parser
 
 response = chain.invoke({
