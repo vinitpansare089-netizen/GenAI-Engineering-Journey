@@ -8,6 +8,7 @@ embedding = HuggingFaceEmbeddings(
 ###Text
 text = 'Krishna is the god'
 
+
 ## Converted text into vectors
 vector = embedding.embed_query(text)
 
