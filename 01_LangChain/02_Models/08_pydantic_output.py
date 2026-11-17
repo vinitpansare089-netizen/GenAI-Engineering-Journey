@@ -30,8 +30,8 @@ chain = prompt | llm | parser
 response = chain.invoke({
     "situation": "I helped a friend who was struggling with studies.",
     "format_instructions": parser.get_format_instructions()
+    
 })
-
 
 print(response)
 print(type(response))
