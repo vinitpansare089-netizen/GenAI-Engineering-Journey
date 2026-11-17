@@ -32,7 +32,6 @@ response = chain.invoke({
     "format_instructions": parser.get_format_instructions()
 })
 
-
 print(response)
 print(type(response))
 print(response.lesson)
