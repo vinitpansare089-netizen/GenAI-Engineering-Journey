@@ -3,10 +3,13 @@ from langchain_community.document_loaders import TextLoader
 
 ##Loaded the Text file
 loader = TextLoader(
-    '01_LangChain\05_Document_Loaders\01_text_loader.py'
+    '01_LangChain/05_Document_Loaders/data/krishna_story.txt',
+    encoding= "utf-8"
 )
 
 ###Extract the document
-document = loader.load()
+documents = loader.load()
 
-print(len(document))
+print('Documents: ',len(documents))
+print(documents[0].page_content)
+print(documents[0].metadata)
