@@ -15,7 +15,7 @@ stories = [
 ]
 
 ##User query
-text = ['How can I work without worrying about the outcome?']
+text = 'How can I work without worrying about the outcome?'
 
 ###Convert stories into embeddings
 story_vector = embeddings.embed_documents(stories)
