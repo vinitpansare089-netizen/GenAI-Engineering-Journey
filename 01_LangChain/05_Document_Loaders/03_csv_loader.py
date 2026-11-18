@@ -5,5 +5,8 @@ loader = CSVLoader(
 )
 
 document = loader.load()
+###////   loader.lazy_load()	Loads documents incrementally
 
-print(len(document))
+print(len(document))   #?/////	Counts Document objects
+print(document[0].page_content)  #//// Accesses extracted content
+print(document[0].metadata)
