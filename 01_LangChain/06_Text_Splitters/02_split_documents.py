@@ -19,7 +19,6 @@ document = Document(
 )
 
 splitter = RecursiveCharacterTextSplitter(
-
     chunk_size = 100,
     chunk_overlap = 20
 )
