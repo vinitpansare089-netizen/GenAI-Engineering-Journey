@@ -21,3 +21,8 @@ splitter = RecursiveCharacterTextSplitter(
 chunks = splitter.split_text(text)
 
 print('Total Chunks: ', len(chunks))
+
+for i, chunk in enumerate(chunks, start=1):
+    print(f'\n--- chunks {i} ---')
+    print(chunk)
+    print('characters: ',len(chunk))
