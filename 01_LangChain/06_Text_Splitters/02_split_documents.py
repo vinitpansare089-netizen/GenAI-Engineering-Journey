@@ -22,3 +22,7 @@ splitter = RecursiveCharacterTextSplitter(
     chunk_size = 100,
     chunk_overlap = 20
 )
+
+chunks = splitter.split_documents([document])
+
+print('Total Chunks: ',len(chunks))
