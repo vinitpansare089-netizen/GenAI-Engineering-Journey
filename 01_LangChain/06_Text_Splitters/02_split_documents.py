@@ -28,6 +28,6 @@ chunks = splitter.split_documents([document])
 print('Total Chunks: ',len(chunks))
 
 for i, chunk in enumerate(chunks):
-    print(f'\\n--- chunk {i} ---')
+    print(f'\n--- chunk {i} ---')
     print(chunk.page_content)
     print('metadata: ', chunk.metadata)
