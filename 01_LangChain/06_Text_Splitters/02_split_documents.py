@@ -17,3 +17,8 @@ document = Document(
         "page": 1
     }
 )
+
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size = 100,
+    chunk_overlap = 20
+)
