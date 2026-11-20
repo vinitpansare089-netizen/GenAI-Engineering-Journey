@@ -63,3 +63,7 @@ vector_store = FAISS.from_documents(
 ### Search Similar Documents
 query = "How can I perform my duty without worrying about results?"
 
+results = vector_store.similarity_search(
+    query,
+    k = 2
+)
