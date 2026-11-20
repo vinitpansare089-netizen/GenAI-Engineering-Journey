@@ -62,15 +62,13 @@ vector_store = FAISS.from_documents(
 ### Search Similar Documents
 query = "How can I perform my duty without worrying about results?"
 
-results = vector_store.similarity_search(
+results = vector_store.similarity_search_with_score(
     query,
-    k = 2
+    k=2
 )
 
-### Displaying Retrived Documents
-print('\nRetrived Documents')
-
-for i, doc in enumerate(results, start=1):
-    print(f'\nResult {i}')
-    print('content:',doc.page_content)
-    print('Metadata:', doc.metadata)
+for i, (doc, score) in enumerate(results, start=1):
+    print(f"\nResult {i}")
+    print("Content:", doc.page_content)
+    print("Score:", score)
+    print("Metadata:", doc.metadata)
