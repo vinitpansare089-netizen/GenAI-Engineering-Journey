@@ -13,3 +13,12 @@ vector_store = FAISS.load_local(
 
 print("FAISS index loaded successfully!")
 print("Total vectors:", vector_store.index.ntotal)
+
+query = "What does Krishna teach about duty?"
+
+results = FAISS.similarity_search(query, k = 2)
+
+for i, doc in enumerate(results):
+    print(f"\nResult {i}")
+    print("Content:", doc.page_content)
+    print("Metadata:", doc.metadata)
