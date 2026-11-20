@@ -63,7 +63,7 @@ vector_store.save_local(
     'Faiss_Krishna_index'
 )
 
-print('')
+print('FAISS index saved Locally')
 
 ### Search Similar Documents
 query = "How can I perform my duty without worrying about results?"
