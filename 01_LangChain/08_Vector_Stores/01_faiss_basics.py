@@ -46,5 +46,4 @@ splitter = RecursiveCharacterTextSplitter(
 ### Chunking
 chunks = splitter.split_documents(documents)
 
-
-
+print('Chunks: ', len(chunks))
