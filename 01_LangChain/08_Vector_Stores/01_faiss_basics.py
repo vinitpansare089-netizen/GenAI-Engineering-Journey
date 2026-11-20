@@ -47,3 +47,15 @@ splitter = RecursiveCharacterTextSplitter(
 chunks = splitter.split_documents(documents)
 
 print('Chunks: ', len(chunks))
+
+### Embedding model Loading...
+embeddings = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2",
+    temperature = 0
+)
+
+### Create FAISS Vector Store
+vector_store = FAISS.from_documents(
+    documents = chunks,
+    embedding = embeddings
+)
