@@ -36,3 +36,15 @@ documents = [
         metadata={"source": "krishna_story_5.txt"}
     )
 ]
+
+## Splitting the Document 
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size = 100,
+    chunk_overlap = 20
+)
+
+### Chunking
+chunks = splitter.split_documents(documents)
+
+
+
