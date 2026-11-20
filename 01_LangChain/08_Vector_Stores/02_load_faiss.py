@@ -16,9 +16,9 @@ print("Total vectors:", vector_store.index.ntotal)
 
 query = "What does Krishna teach about duty?"
 
-results = FAISS.similarity_search(query, k = 2)
+results = vector_store.similarity_search(query, k=2)
 
-for i, doc in enumerate(results):
-    print(f"\nResult {i}")
-    print("Content:", doc.page_content)
-    print("Metadata:", doc.metadata)
+for i, doc in enumerate(results, start=1):
+        print(f"\nResult {i}")
+        print("Content:", doc.page_content)
+        print("Metadata:", doc.metadata)
