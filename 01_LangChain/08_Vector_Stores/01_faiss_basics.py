@@ -67,3 +67,11 @@ results = vector_store.similarity_search(
     query,
     k = 2
 )
+
+### Displaying Retrived Documents
+print('\nRetrived Documents')
+
+for i, doc in enumerate(results, start=1):
+    print(f'\nResult {i}')
+    print('content:',doc.page_content)
+    print('Metadata:', doc.metadata)
