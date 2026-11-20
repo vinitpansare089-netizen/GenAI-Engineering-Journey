@@ -50,8 +50,7 @@ print('Chunks: ', len(chunks))
 
 ### Embedding model Loading...
 embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2",
-    temperature = 0
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
 
 ### Create FAISS Vector Store
