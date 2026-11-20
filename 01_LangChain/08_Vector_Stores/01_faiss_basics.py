@@ -57,6 +57,7 @@ embeddings = HuggingFaceEmbeddings(
 vector_store = FAISS.from_documents(
     documents = chunks,
     embedding = embeddings
+    
 )
 
 ### Search Similar Documents
