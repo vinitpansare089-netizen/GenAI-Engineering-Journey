@@ -59,3 +59,7 @@ vector_store = FAISS.from_documents(
     documents = chunks,
     embedding = embeddings
 )
+
+### Search Similar Documents
+query = "How can I perform my duty without worrying about results?"
+
