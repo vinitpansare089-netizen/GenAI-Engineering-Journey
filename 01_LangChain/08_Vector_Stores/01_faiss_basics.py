@@ -59,6 +59,12 @@ vector_store = FAISS.from_documents(
     embedding = embeddings
 )
 
+vector_store.save_local(
+    'Faiss_Krishna_index'
+)
+
+print('')
+
 ### Search Similar Documents
 query = "How can I perform my duty without worrying about results?"
 
