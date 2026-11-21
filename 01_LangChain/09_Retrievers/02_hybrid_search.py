@@ -49,4 +49,4 @@ results = hybrid_retriever.invoke(query)
 for i, doc in enumerate(results, start=1):
     print(f"\nResult {i}")
     print("Content:", doc.page_content)
-    print("Metadata:", doc.metadata) 
+    print("Metadata:", doc.metadata)
