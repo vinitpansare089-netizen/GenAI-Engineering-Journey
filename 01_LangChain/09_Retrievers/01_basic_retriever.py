@@ -11,15 +11,29 @@ vector_store = FAISS.load_local(
     allow_dangerous_deserialization=True
 )
 
-retriever = vector_store.as_retriever(
-    search_kwargs = {'k' : 2}
+print("Stored metadata:")
+
+for doc in vector_store.similarity_search(
+    "Krishna",
+    k=5
+):
+    print(doc.metadata)
+
+retriever = vector_store.as_retriever( #/// This converts your vector store into a retriever.
+    search_type = 'mmr',
+    search_kwargs = {
+        'k' : 2,
+        'fetch_k' : 5,
+        'lambda_mult' : 0,
+        "filter": {"deity": "Shiva"}
+    }
 )
 
 query = "How can I perform my duty without worrying about results?"
 
 results = retriever.invoke(query)
 
-for i, doc in enumerate(results):
+for i, doc in enumerate(results,start = 1):
     print(f'\nResult {i}')
     print('content: ', doc.page_content)
     print('metadata: ', doc.metadata)
