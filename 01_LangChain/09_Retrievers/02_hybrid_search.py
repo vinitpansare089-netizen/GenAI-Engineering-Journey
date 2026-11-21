@@ -50,3 +50,4 @@ for i, doc in enumerate(results, start=1):
     print(f"\nResult {i}")
     print("Content:", doc.page_content)
     print("Metadata:", doc.metadata)
+    
