@@ -46,3 +46,23 @@ def format_docs(docs):
     return "\n\n".join(
         doc.page_content for doc in docs
     )
+
+
+# 6. Create RAG prompt
+prompt = ChatPromptTemplate.from_messages([
+    (
+        "system",
+        """You are a thoughtful guide inspired by Krishna's teachings.
+
+Answer the user's question using only the provided context.
+If the context does not contain enough information, clearly say so.
+Do not invent scriptural quotations or references.
+
+Context:
+{context}"""
+    ),
+    (
+        "human",
+        "{question}"
+    )
+])
