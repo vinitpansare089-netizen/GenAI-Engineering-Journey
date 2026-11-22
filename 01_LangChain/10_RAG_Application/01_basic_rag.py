@@ -20,3 +20,23 @@ load_dotenv()
 embeddings = HuggingFaceEmbeddings(
     model_name = "sentence-transformers/all-MiniLM-L6-v2"
 )
+
+###Load FAISS index
+vector_store = FAISS.load_local(
+    "faiss_krishna_index",
+    embeddings,
+    allow_dangerous_deserialization=True
+)
+
+##Retriever 
+retriever = vector_store.as_retriever(
+    search_type = 'similarity',
+    search_kwargs = {'k': 3}
+)
+
+###Load groq LLM
+llm = ChatGroq(
+    model="openai/gpt-oss-20b",
+    temperature = 0,
+    max_tokens= 1024
+)
