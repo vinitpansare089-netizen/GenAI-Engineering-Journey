@@ -41,4 +41,8 @@ llm = ChatGroq(
     max_tokens= 1024
 )
 
-print("RAG components loaded successfully!")
+###Format retrieved documents
+def format_docs(docs):
+    return "\n\n".join(
+        doc.page_content for doc in docs
+    )
