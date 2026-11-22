@@ -10,8 +10,12 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_core.runnables import RunnablePassthrough
+from langchain_core.runnables import (
+    RunnablePassthrough,
+    RunnableParallel
+)
 from langchain_community.vectorstores import FAISS
+from operator import itemgetter
 
 load_dotenv()
 
@@ -86,3 +90,30 @@ response = rag_chain.invoke(query)
 
 print("\nKrishna's Response:\n")
 print(response)
+
+# 9. RAG chain with source documents
+rag_chain_with_sources = (
+    {
+        "context": retriever | format_docs,
+        "question": RunnablePassthrough(),
+        "source_documents": retriever
+    }
+    | RunnableParallel(
+        {
+            "answer": prompt | llm | StrOutputParser(),
+            "source_documents": itemgetter("source_documents")
+        }
+    )
+)
+
+
+result = rag_chain_with_sources.invoke(query)
+
+print("\nAnswer:\n")
+print(result["answer"])
+
+print("\nSources:\n")
+
+for doc in result["source_documents"]:
+    print(doc.metadata.get("source", "Unknown source"))
+    
