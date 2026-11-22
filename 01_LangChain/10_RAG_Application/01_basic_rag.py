@@ -116,4 +116,3 @@ print("\nSources:\n")
 
 for doc in result["source_documents"]:
     print(doc.metadata.get("source", "Unknown source"))
-    
