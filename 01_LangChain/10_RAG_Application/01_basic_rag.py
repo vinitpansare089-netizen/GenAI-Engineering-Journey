@@ -48,7 +48,7 @@ def format_docs(docs):
     )
 
 
-# 6. Create RAG prompt
+## Create RAG prompt
 prompt = ChatPromptTemplate.from_messages([
     (
         "system",
@@ -68,3 +68,21 @@ Context:
 ])
 
 
+# 7. Build RAG chain using LCEL
+rag_chain = (
+    {
+        "context": retriever | format_docs,
+        "question": RunnablePassthrough()
+    }
+    | prompt
+    | llm
+    | StrOutputParser()
+)
+
+# 8. Ask a question
+query = "What does Krishna teach about duty?"
+
+response = rag_chain.invoke(query)
+
+print("\nKrishna's Response:\n")
+print(response)
