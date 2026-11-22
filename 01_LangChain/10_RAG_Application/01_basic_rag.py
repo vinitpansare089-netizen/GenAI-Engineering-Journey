@@ -40,3 +40,5 @@ llm = ChatGroq(
     temperature = 0,
     max_tokens= 1024
 )
+
+print("RAG components loaded successfully!")
